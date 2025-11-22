@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.libsdlmixer4j</groupId>
+  <artifactId>libsdlmixer4j</artifactId>
+  <version>2.0.0.1</version>
+  <name>LibSDLMxer4j</name>
+  <description>LibSDLMxer4j - Java language bindings for SDL2 Mixer</description>
+</project>
