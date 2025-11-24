@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.libsdlmixer4j</groupId>
   <artifactId>libsdlmixer4j</artifactId>
@@ -14,7 +16,7 @@
   </properties>
 
   <dependencies>
-    <!-- JNA (core + platform helper) -->
+		<!-- JNA (core + platform helper) -->
     <dependency>
       <groupId>net.java.dev.jna</groupId>
       <artifactId>jna</artifactId>
@@ -25,11 +27,19 @@
       <artifactId>jna-platform</artifactId>
       <version>${jna.version}</version>
     </dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/io.github.libsdl4j/libsdl4j -->
+		<dependency>
+			<groupId>io.github.libsdl4j</groupId>
+			<artifactId>libsdl4j</artifactId>
+			<version>2.28.4-1.6</version>
+		</dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <!-- shade/assembly if you want an uber-jar that can include natives -->
+			<!-- shade/assembly if you want an uber-jar that can include natives -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
