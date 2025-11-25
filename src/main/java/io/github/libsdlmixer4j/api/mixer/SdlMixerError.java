@@ -1,7 +1,6 @@
 package io.github.libsdlmixer4j.api.mixer;
 
 import io.github.libsdl4j.api.error.SdlError;
-import io.github.libsdlmixer4j.jna.SdlMixerNativeLibraryLoader;
 
 public class SdlMixerError {
 	
