@@ -15,6 +15,7 @@ public class SdlMixerDevice {
 	public static native void Mix_PauseAudio(int pause_on);
 	public static native int Mix_QuerySpec(IntByReference frequency, ShortByReference format, IntByReference channels);
 	public static native int Mix_AllocateChannels(int numchans);
+	public static native void Mix_CloseAudio();
 	
 	private SdlMixerDevice() {}
 
