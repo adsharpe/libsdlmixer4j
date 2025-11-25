@@ -50,6 +50,28 @@ public class SdlMixerChannel {
     public static native void Mix_Pause(int channel);
     public static native void Mix_Resume(int channel);
     public static native int Mix_Paused(int channel);
+    
+    // Music playback control
+    public static native void Mix_PauseMusic();
+    public static native void Mix_ResumeMusic();
+    public static native void Mix_RewindMusic();
+    public static native int Mix_PausedMusic();
+    public static native int Mix_ModMusicJumpToOrder(int order);
+    public static native int Mix_StartTrack(Mix_Music music, int track);
+    public static native int Mix_GetNumTracks(Mix_Music music);
+    public static native int Mix_SetMusicPosition(double position);
+    public static native double Mix_GetMusicPosition(Mix_Music music);
+    public static native double Mix_MusicDuration(Mix_Music music);
+    public static native double Mix_GetMusicLoopStartTime(Mix_Music music);
+    public static native double Mix_GetMusicLoopEndTime(Mix_Music music);
+    public static native double Mix_GetMusicLoopLengthTime(Mix_Music music);
+
+    // Music & Channel Playing State
+    public static native int Mix_Playing(int channel);
+    public static native int Mix_PlayingMusic();
+
+    // External Music Command (for MUS_CMD type)
+    public static native int Mix_SetMusicCMD(String command);
 	
 	private SdlMixerChannel() {}
 }
