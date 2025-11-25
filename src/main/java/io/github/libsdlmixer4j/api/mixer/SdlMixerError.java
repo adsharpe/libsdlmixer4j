@@ -2,25 +2,25 @@ package io.github.libsdlmixer4j.api.mixer;
 
 import io.github.libsdl4j.api.error.SdlError;
 
-public class SdlMixerError {
+public final class SdlMixerError {
 	
 	// Set last error message
-    public int Mix_SetError(String fmt, Object... args) {
+    public static int Mix_SetError(String fmt, Object... args) {
     	return SdlError.SDL_SetError(fmt, args);
     }
 
 	// Get last error message
-    public String Mix_GetError() {
+    public static String Mix_GetError() {
 		return SdlError.SDL_GetError();
 	}
 
 	// Clear last error message
-    public void Mix_ClearError() {
+    public static void Mix_ClearError() {
 		SdlError.SDL_ClearError();
 	}
 
 	// Set "out of memory" error
-    public void Mix_OutOfMemory() {
+    public static void Mix_OutOfMemory() {
 		SdlError.SDL_SetError("Out of memory");
 	}
 	
