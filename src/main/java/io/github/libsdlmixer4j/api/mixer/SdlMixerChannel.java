@@ -1,5 +1,8 @@
 package io.github.libsdlmixer4j.api.mixer;
 
+import com.sun.jna.Callback;
+import com.sun.jna.Pointer;
+
 import io.github.libsdlmixer4j.jna.SdlMixerNativeLibraryLoader;
 
 public class SdlMixerChannel {
@@ -72,6 +75,22 @@ public class SdlMixerChannel {
 
     // External Music Command (for MUS_CMD type)
     public static native int Mix_SetMusicCMD(String command);
+    
+    // --- SoundFont management ---
+    public static native int Mix_SetSoundFonts(String paths);
+    public static native String Mix_GetSoundFonts();
+
+    // Callback for each soundfont: int func(const char* path, void* data)
+    interface Each_SoundFont_Callback extends Callback {
+        int invoke(String path, Pointer data);
+    }
+
+    public static native int Mix_EachSoundFont(Each_SoundFont_Callback function, Pointer data);
+    public static native int Mix_SetTimidityCfg(String path);
+    public static native String Mix_GetTimidityCfg();
+
+    // --- Get channel Mix_Chunk ---
+    public static native Mix_Chunk Mix_GetChunk(int channel);
 	
 	private SdlMixerChannel() {}
 }
