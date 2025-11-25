@@ -1,6 +1,6 @@
 package io.github.libsdlmixer4j.api;
 
-public class MIXInitFlags {
+public class Mix_InitFlags {
 	public static final int MIX_INIT_FLAC     = 0x00000001;
 	public static final int MIX_INIT_MOD      = 0x00000002;
 	public static final int MIX_INIT_MP3      = 0x00000008;
@@ -9,5 +9,5 @@ public class MIXInitFlags {
 	public static final int MIX_INIT_OPUS     = 0x00000040;
 	public static final int MIX_INIT_WAVPACK  = 0x00000080;
 	
-	private MIXInitFlags() {}
+	private Mix_InitFlags() {}
 }

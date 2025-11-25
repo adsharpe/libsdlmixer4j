@@ -4,10 +4,10 @@ import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.ShortByReference;
 import io.github.libsdlmixer4j.jna.SdlMixerNativeLibraryLoader;
 
-public class SdlDevice {
+public class SdlMixerDevice {
 	
 	static {
-		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlDevice.class);
+		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlMixerDevice.class);
 	}
 	
 	public static native int Mix_OpenAudio(int frequency, short format, int channels, int chunksize);
@@ -16,6 +16,6 @@ public class SdlDevice {
 	public static native int Mix_QuerySpec(IntByReference frequency, ShortByReference format, IntByReference channels);
 	public static native int Mix_AllocateChannels(int numchans);
 	
-	private SdlDevice() {}
+	private SdlMixerDevice() {}
 
 }

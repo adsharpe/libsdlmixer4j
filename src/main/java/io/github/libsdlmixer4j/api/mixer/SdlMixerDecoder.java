@@ -4,10 +4,10 @@ import com.sun.jna.Pointer;
 
 import io.github.libsdlmixer4j.jna.SdlMixerNativeLibraryLoader;
 
-public class SdlDecoder {
+public class SdlMixerDecoder {
 	
 	static {
-		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlDecoder.class);
+		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlMixerDecoder.class);
 	}
 
 	public static native Mix_Chunk Mix_LoadWAV_RW(Pointer rwops, int freesrc);
@@ -25,5 +25,5 @@ public class SdlDecoder {
 	public static native String Mix_GetMusicDecoder(int index);
 	public static native boolean Mix_HasMusicDecoder(String name);
 	
-	private SdlDecoder() {}
+	private SdlMixerDecoder() {}
 }

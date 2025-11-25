@@ -2,10 +2,10 @@ package io.github.libsdlmixer4j.api.mixer;
 
 import io.github.libsdlmixer4j.jna.SdlMixerNativeLibraryLoader;
 
-public class SdlMetaData {
+public class SdlMixerMetaData {
 	
 	static {
-		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlMetaData.class);
+		SdlMixerNativeLibraryLoader.registerNativeMethods(SdlMixerMetaData.class);
 	}
 	
 	public static native int Mix_GetMusicType(Mix_Music music);
@@ -15,7 +15,5 @@ public class SdlMetaData {
 	public static native String Mix_GetMusicAlbumTag(Mix_Music music);
 	public static native String Mix_GetMusicCopyrightTag(Mix_Music music);
 	
-	
-	
-	private SdlMetaData() {}
+	private SdlMixerMetaData() {}
 }
