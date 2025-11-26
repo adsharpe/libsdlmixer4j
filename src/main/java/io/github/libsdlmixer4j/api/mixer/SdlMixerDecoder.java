@@ -18,6 +18,7 @@ public class SdlMixerDecoder {
 	public static native Mix_Chunk Mix_QuickLoad_WAV(Pointer mem);
 	public static native Mix_Chunk Mix_QuickLoad_RAW(Pointer mem, int len);
 	public static native void Mix_FreeChunk(Mix_Chunk chunk);
+	public static native void Mix_FreeMusic(Mix_Music music);
 	public static native int Mix_GetNumChunkDecoders();
 	public static native String Mix_GetChunkDecoder(int index);
 	public static native boolean Mix_HasChunkDecoder(String name);
